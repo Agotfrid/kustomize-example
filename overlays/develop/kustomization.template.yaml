@@ -1,0 +1,17 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: python-app-develop
+bases:
+- ../../base
+images:
+- name: agotfrid/python-app
+  newName: agotfrid/python-app
+  newTag: "${IMAGE_VERSION}"
+resources:
+- app-env-configmap.yaml
+- app-env-secret.yaml
+- mysql-deployment.yaml
+- mysql-service.yaml
+patchesStrategicMerge:
+- set-replicas.yaml

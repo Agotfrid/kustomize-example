@@ -13,5 +13,7 @@ resources:
 - app-env-secret.yaml
 - mysql-deployment.yaml
 - mysql-service.yaml
+- pv.yaml
+- pvc.yaml
 patchesStrategicMerge:
 - set-replicas.yaml

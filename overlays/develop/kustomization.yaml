@@ -6,11 +6,13 @@ bases:
 images:
 - name: agotfrid/python-app
   newName: agotfrid/python-app
-  newTag: 1.0.1
+  newTag: latest
 resources:
 - app-env-configmap.yaml
 - app-env-secret.yaml
 - mysql-deployment.yaml
 - mysql-service.yaml
+- pv.yaml
+- pvc.yaml
 patchesStrategicMerge:
 - set-replicas.yaml

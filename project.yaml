@@ -1,0 +1,19 @@
+---
+# Project yaml for argocd, deployed inside argocd namespace
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: python-app
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  description: All components of the sample-python-app
+  destinations:
+  - namespace: python-app-develop
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: true
+  sourceRepos:
+  - git@github.com:Agotfrid/kustomize-example.git

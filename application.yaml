@@ -1,0 +1,24 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: python-app-develop
+  namespace: argocd
+spec:
+  destination:
+    namespace: python-app-develop
+    server: https://kubernetes.default.svc
+  project: python-app
+  source:
+    path: overlays/develop
+    repoURL: git@github.com:Agotfrid/kustomize-example.git
+    targetRevision: main
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
+  ignoreDifferences:
+  - group: "*"
+    kind: Deployment
+    name: python-app
+    namespace: python-app-develop

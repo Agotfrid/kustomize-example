@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: app-env
 data:
-  MYSQL_DATABASE_DB: "python-app-db"
+  db_name: "python-app-db"
   MYSQL_SERVICE_HOST: "mysql"
   MYSQL_SERVICE_PORT: "3306"

@@ -23,7 +23,7 @@ kubectl apply -k overlays/develop
 
 To manage these resources automatically using ArgoCD, you need to have ArgoCD installed and running in your cluster. 
 
-Apply `application.yaml` and `project.yaml` located in the `argocd` directory to the `argocd` namespace:
+Apply `application.yaml` and `project.yaml` to the `argocd` namespace to make sure argocd will monitor and sync changes in kustomize repo:
 
 ```
 kubectl apply -f argocd/project.yaml -n argocd

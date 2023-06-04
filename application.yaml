@@ -17,8 +17,3 @@ spec:
     automated: {}
     syncOptions:
     - CreateNamespace=true
-  ignoreDifferences:
-  - group: "*"
-    kind: Deployment
-    name: python-app
-    namespace: python-app-develop

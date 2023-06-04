@@ -1,3 +1,4 @@
+---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: python-app-develop
@@ -6,7 +7,7 @@ bases:
 images:
 - name: agotfrid/python-app
   newName: agotfrid/python-app
-  newTag: latest
+  newTag: "076a9536761a2d9e8394591001062081d630edb7"
 resources:
 - app-env-configmap.yaml
 - app-env-secret.yaml

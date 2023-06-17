@@ -7,7 +7,7 @@ bases:
 images:
 - name: agotfrid/python-app
   newName: agotfrid/python-app
-  newTag: "903b6747ad4ac0fac48f9bbc7b8b79cbc9f98aef"
+  newTag: "12ff3152952adb4e1e1ce3eaadf0879d9e3c3342"
 resources:
 - app-env-configmap.yaml
 - app-env-secret.yaml
